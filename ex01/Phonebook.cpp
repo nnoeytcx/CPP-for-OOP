@@ -64,7 +64,8 @@ void Phonebook::print_str(Contact contact, int field)
             std::cout<<info[i];
         std::cout<<".";
     }
-    std::cout<<"|";
+    if (field<2)
+        std::cout<<"|";
 }
 
 void Phonebook::show_contact(void)
