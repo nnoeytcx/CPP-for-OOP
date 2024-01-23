@@ -71,7 +71,7 @@ void Phonebook::print_str(Contact contact, int field)
 void Phonebook::show_contact(void)
 {
     std::cout << "-------------------------------------------" << std::endl;
-	std::cout << "     index| firstname|  lastname|  nickname" << std::endl;
+	std::cout << "     INDEX| FIRSTNAME|  LASTNAME|  NICKNAME" << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;
     for (int i = 0 ; i < no_contact ; i++)
     {
@@ -91,7 +91,7 @@ void Phonebook::search(void)
 
     //std::cout<<"(PhoneBook try search)"<<"\n";
     show_contact();
-    std::cout << "Enter index : ";
+    std::cout << "Enter index  : ";
 	std::getline(std::cin, input);
     if(checkInput(input) || checkDigit(input))
         std::cout<<"Enter index number pls!"<<std::endl;
@@ -102,13 +102,13 @@ void Phonebook::search(void)
             std::cout<<"Enter valid index pls!"<<std::endl;
         else
         {
-            std::cout << "Firstname: ";
+            std::cout<<"Firstname    : ";
 	        std::cout<<contact[target].getfirstname() << std::endl;
-	        std::cout<<"Lastname: ";
+	        std::cout<<"Lastname     : ";
 	        std::cout<<contact[target].getlastname() << std::endl;
-	        std::cout<<"Nickname: ";
+	        std::cout<<"Nickname     : ";
 	        std::cout<<contact[target].getnickname() << std::endl;
-	        std::cout<<"Phonenumber: ";
+	        std::cout<<"Phonenumber  : ";
 	        std::cout<<contact[target].getphonenumber() << std::endl;
 	        std::cout<<"Darkestsecret: ";
 	        std::cout<<contact[target].getdarkestsecret() << std::endl;
