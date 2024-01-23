@@ -14,7 +14,7 @@
 
 void Phonebook::add(void)
 {
-    std::cout<<"(PhoneBook try add)"<<"\n";
+    //std::cout<<"(PhoneBook try add)"<<"\n";
 
     std::string prompt[5] = {"  Firstname : ", "  Lastname : ", "  Nickname : ", "  Phonenumber : ", "  Darkestsecret : "};
 	std::string	input[5];
@@ -85,8 +85,34 @@ void Phonebook::show_contact(void)
 
 void Phonebook::search(void)
 {
-    std::cout<<"(PhoneBook try search)"<<"\n";
+    std::string input;
+    int target;
+
+    //std::cout<<"(PhoneBook try search)"<<"\n";
     show_contact();
+    std::cout << "Enter index : ";
+	std::getline(std::cin, input);
+    if(checkInput(input) || checkDigit(input))
+        std::cout<<"Enter index number pls!"<<std::endl;
+    else
+    {
+        target = stoi(input);
+        if (target >= no_contact)
+            std::cout<<"Enter valid index pls!"<<std::endl;
+        else
+        {
+            std::cout << "Firstname: ";
+	        std::cout<<contact[target].getfirstname() << std::endl;
+	        std::cout<<"Lastname: ";
+	        std::cout<<contact[target].getlastname() << std::endl;
+	        std::cout<<"Nickname: ";
+	        std::cout<<contact[target].getnickname() << std::endl;
+	        std::cout<<"Phonenumber: ";
+	        std::cout<<contact[target].getphonenumber() << std::endl;
+	        std::cout<<"Darkestsecret: ";
+	        std::cout<<contact[target].getdarkestsecret() << std::endl;
+        }
+    }
 }
 
 Phonebook::Phonebook(void)
@@ -121,6 +147,16 @@ int	Phonebook::checkInput(std::string str)
 		if (c == '\r' || c == '\n' || c == '\f' )
 		    return (1);
 	    if (c == '\v' || c == '\t' || c == ' ' )
+			return (1);
+	}
+	return (0);
+}
+
+int	Phonebook::checkDigit(std::string str)
+{
+	for (int i = 0 ; i < str.length() ; i++)
+	{
+		if (!isdigit(str[i]))
 			return (1);
 	}
 	return (0);

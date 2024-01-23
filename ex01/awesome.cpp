@@ -23,12 +23,12 @@ int	main(void)
 		std::getline(std::cin, str);
 		if (str == "ADD")
 		{
-			std::cout<<"we get : [ADD]"<<"\n";
+			//std::cout<<"we get : [ADD]"<<"\n";
 			phonebook.get_com("add");
 		}
 		else if (str == "SEARCH")
 		{
-			std::cout<<"we get : [SEARCH]"<<"\n";
+			//std::cout<<"we get : [SEARCH]"<<"\n";
 			phonebook.get_com("search");
 		}
 		else if (str == "EXIT")

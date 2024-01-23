@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 #include "Contact.hpp"
 
 class Phonebook {
@@ -23,6 +24,7 @@ class Phonebook {
 		int	no_contact;
 		Contact contact[8];
 		int checkInput(std::string str);
+		int checkDigit(std::string str);
 		void add(void);
 		void search(void);
 		void show_contact(void);
