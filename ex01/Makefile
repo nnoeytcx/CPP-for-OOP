@@ -16,7 +16,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -fr
 
-SRC = awesome.cpp #Phonebook.cpp Contact.cpp
+SRC = awesome.cpp Phonebook.cpp Contact.cpp
 OBJ = $(SRC:.cpp=.o)
 
 # %.o:%.c

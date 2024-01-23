@@ -15,7 +15,7 @@
 int	main(void)
 {
 	std::string	str;
-	//Phonebook	phonebook;
+	Phonebook	phonebook;
 
 	while (1)
 	{
@@ -24,10 +24,12 @@ int	main(void)
 		if (str == "ADD")
 		{
 			std::cout<<"we get : [ADD]"<<"\n";
+			phonebook.get_com("add");
 		}
 		else if (str == "SEARCH")
 		{
 			std::cout<<"we get : [SEARCH]"<<"\n";
+			phonebook.get_com("search");
 		}
 		else if (str == "EXIT")
 			exit(0);

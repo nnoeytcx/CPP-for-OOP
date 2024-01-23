@@ -36,3 +36,11 @@ std::string Contact::getdarkestsecret()
 {
 	return(this->darkestsecret);
 }
+void	Contact::setdata(std::string input[5])
+{
+	firstname = input[0];
+	lastname = input[1];
+	nickname = input[2];
+	phonenumber = input[3];
+	darkestsecret = input[4];
+}

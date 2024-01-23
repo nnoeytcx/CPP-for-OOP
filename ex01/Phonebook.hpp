@@ -17,9 +17,14 @@ class Phonebook {
 	public:
 		Phonebook();
 		~Phonebook();
-		void add(void);
-		void search(void);
+		void get_com(std::string str);
 	private:
 		int index;
+		int	no_contact;
 		Contact contact[8];
+		int checkInput(std::string str);
+		void add(void);
+		void search(void);
+		void show_contact(void);
+		void print_str(Contact contact, int field);
 };
