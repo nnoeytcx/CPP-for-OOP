@@ -14,7 +14,7 @@ NAME = phonebook
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-RM = rm -fr
+RM = rm -f
 
 SRC = awesome.cpp Phonebook.cpp Contact.cpp
 OBJ = $(SRC:.cpp=.o)
