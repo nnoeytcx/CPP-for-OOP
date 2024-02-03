@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/30 12:26:16 by tpoungla          #+#    #+#              #
-#    Updated: 2024/01/30 17:13:51 by tpoungla         ###   ########.fr        #
+#    Created: 2024/01/30 17:13:31 by tpoungla          #+#    #+#              #
+#    Updated: 2024/01/31 17:01:20 by tpoungla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ZombieHorde
+NAME = Brain
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
-SRC = main.cpp Zombie.cpp ZombieHorde.cpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 # %.o:%.c
