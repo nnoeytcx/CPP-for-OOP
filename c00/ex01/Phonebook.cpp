@@ -148,12 +148,12 @@ int	Phonebook::checkInput(std::string str)
 	for (int i = 0 ; i < str.length() ; i++)
 	{
         c = str[i];
-		if (c == '\r' || c == '\n' || c == '\f' )
-		    return (1);
-	    if (c == '\v' || c == '\t' || c == ' ' )
-			return (1);
+		if (c != '\r' || c != '\n' || c != '\f' )
+		    return (0);
+	    if (c != '\v' || c != '\t' || c != ' ' )
+			return (0);
 	}
-	return (0);
+	return (1);
 }
 
 int	Phonebook::checkDigit(std::string str)
