@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 01:10:47 by tpoungla          #+#    #+#             */
-/*   Updated: 2024/03/20 01:10:47 by tpoungla         ###   ########.fr       */
+/*   Created: 2024/03/20 14:59:16 by tpoungla          #+#    #+#             */
+/*   Updated: 2024/03/20 14:59:16 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,31 @@ void	Harl::error(void)
 	std::cout<<"This is unacceptable! I want to speak to the manager now."<<std::endl;
 }
 
-void	Harl::complain(std::string level)
+void	Harl::complainFilter(std::string level)
 {
-    for (int i = 0;i < 4;i++)
+    int i;
+    for (i = 0;i < 4;i++)
     {
         if ((this->level)[i] == level)
-        {
-            (this->*func_ptr[i])();
-            return;
-        }
+            break;
     }
-    std::cout<<"Please check your input."<<std::endl;
+
+    switch (i){
+		case 0:
+			(this->*func_ptr[0])();
+			std::cout << std::endl;
+		case 1:
+			(this->*func_ptr[1])();
+			std::cout << std::endl;
+		case 2:
+			(this->*func_ptr[2])();
+			std::cout << std::endl;
+		case 3:
+			(this->*func_ptr[3])();
+			std::cout << std::endl;
+		break;
+		default:
+			std::cout<<"Please check your input."<<std::endl;
+	}
     return;
 }
