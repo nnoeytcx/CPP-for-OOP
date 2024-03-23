@@ -72,27 +72,27 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 
 bool    Fixed::operator>(Fixed const &fp)
 {
-    return (value > fp.value);
+    return (this->value > fp.value);
 }
 bool    Fixed::operator>=(Fixed const &fp)
 {
-    return (value >= fp.value);
+    return (this->value >= fp.value);
 }
 bool    Fixed::operator<(Fixed const &fp)
 {
-    return (value < fp.value);
+    return (this->value < fp.value);
 }
 bool    Fixed::operator<=(Fixed const &fp)
 {
-    return (value <= fp.value);
+    return (this->value <= fp.value);
 }
 bool    Fixed::operator==(Fixed const &fp)
 {
-    return (value == fp.value);
+    return (this->value == fp.value);
 }
 bool    Fixed::operator!=(Fixed const &fp)
 {
-    return (value != fp.value);
+    return (this->value != fp.value);
 }
 
 Fixed Fixed::operator+(Fixed const &fp) const
