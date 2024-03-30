@@ -15,6 +15,8 @@
 
 # include <iostream>
 
+const std::string BLK = "\033[30m";
+const std::string WHT = "\033[37m";
 const std::string RED = "\033[31m";
 const std::string GREEN = "\033[32m";
 const std::string YELLOW = "\033[33m";

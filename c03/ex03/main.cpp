@@ -11,31 +11,31 @@
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-    ClapTrap a("Mai");
-	ScavTrap b("Pwave");
+    DiamondTrap	diamond("Pwave");
+	DiamondTrap	diamond2("Pmobile");
 
-	a.printStatus();
-	b.printStatus();
-	// for (int i=1; i < 13 ; i++)
-	// {
-	// 	std::cout << "=====================" << std::endl;
-	// 	std::cout << std::left << "===== Round " << i << std::right << " ======" << std::endl;
-	// 	std::cout << "====================="<< std::endl;
-	// 	b.attack("Mai");
-	// 	a.takeDamage(b.getAD());
-	// 	a.printStatus();
-	// 	b.printStatus();
-	// 	std::cout << std::endl;
-	// }
-	a.attack("John doe");
-	b.attack("John doe");
+	diamond.printStatus();
+	diamond2.printStatus();
 
-	b.takeDamage(99);
-	a.printStatus();
-	b.printStatus();
-	b.guardGate();
+	diamond.attack("Pmobile");
+	diamond2.takeDamage(30);
+	diamond2.beRepaired(10);
+	diamond.printStatus();
+	diamond2.printStatus();
+	diamond2.attack("Pwave");
+	diamond.takeDamage(20);
+	diamond.takeDamage(20);
+	diamond.beRepaired(10);
+	diamond.printStatus();
+	diamond2.printStatus();
+	diamond.whoAmI();
+	diamond.highFivesGuys();
+	diamond.guardGate();
+	return (0);
 }
