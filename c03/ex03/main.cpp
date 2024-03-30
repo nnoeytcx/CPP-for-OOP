@@ -29,8 +29,8 @@ int main()
 	diamond.printStatus();
 	diamond2.printStatus();
 	diamond2.attack("Pwave");
-	diamond.takeDamage(20);
-	diamond.takeDamage(20);
+	diamond.takeDamage(30);
+	diamond.takeDamage(30);
 	diamond.beRepaired(10);
 	diamond.printStatus();
 	diamond2.printStatus();
