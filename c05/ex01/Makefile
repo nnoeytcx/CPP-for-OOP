@@ -16,8 +16,8 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 #add header too!!
-SRC = main.cpp Bureaucrat.cpp
-HEADER = Bureaucrat.hpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
+HEADER = Bureaucrat.hpp Form.hpp
 OBJS	= $(SRC:.cpp=.o)
 
 %.o:%.c $(HEADER)

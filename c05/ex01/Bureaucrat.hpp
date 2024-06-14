@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string.h>
+# include "Form.hpp"
 
 const std::string BLK = "\033[30m";
 const std::string WHT = "\033[37m";
@@ -26,6 +27,8 @@ const std::string MAGENTA = "\033[35m";
 const std::string CYAN = "\033[36m";
 const std::string RESET = "\033[0m";
 const std::string BOLD = "\u001b[1m";
+
+class Form;
 
 class Bureaucrat
 {
@@ -43,14 +46,22 @@ class Bureaucrat
         void incrementGrade();
 		void decrementGrade();
 
-        class GradeTooHighException: public std::exception{
+        // class myexception: public exception
+        // {
+        //     const char* what() const throw() //declare
+        // } exception's nickname
+
+        class GradeTooHighException: public std::exception
+        {
 			public:
 				const char* what() const throw();
 		};
-		class GradeTooLowException: public std::exception{
+		class GradeTooLowException: public std::exception
+        {
 			public:
 				const char* what() const throw();
 		};
+        void signForm(Form &form);
     private:
         const std::string       _name;
         int                     _grade;

@@ -31,16 +31,26 @@ int main(void)
 		std::cout <<CYAN<< "second : "<< second << std::endl <<RESET;
 		std::cout <<CYAN<< "third : "<< third << std::endl <<RESET;
 		std::cout <<CYAN<< "fourth : "<< fourth << std::endl <<RESET;
-		// std::cout <<RED<< "Try decrement third's grade" << std::endl <<RESET;
-    	// third.decrementGrade();
-		// std::cout <<RED<< "Try increment fourth's grade" << std::endl <<RESET;
-    	// fourth.incrementGrade();
+		//std::cout <<RED<< "Try decrement third's grade" << std::endl <<RESET;
+    	//third.decrementGrade();
+		//std::cout <<RED<< "Try increment fourth's grade" << std::endl <<RESET;
+    	//fourth.incrementGrade();
 		// std::cout <<CYAN<< "first : "<< first << std::endl <<RESET;
 		// std::cout <<CYAN<< "second : "<< second << std::endl <<RESET;
 		// std::cout <<CYAN<< "third : "<< third << std::endl <<RESET;
 		// std::cout <<CYAN<< "fourth : "<< fourth << std::endl <<RESET;
-		// Bureaucrat fifth("P'Muay", 0);
-		// Bureaucrat sixth("someone", 151);
+		//Bureaucrat fifth("P'Muay", 0);
+		//Bureaucrat sixth("someone", 151);
+		Form one("first", 14, 39);
+		std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
+		std::cout <<RED<< "Try sign by second with grade "<<second.getGrade()<< std::endl <<RESET;
+		one.beSigned(second);
+		std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
+		second.signForm(one);
+		std::cout <<RED<< "Try get third sign form with grade "<<third.getGrade()<< std::endl <<RESET;
+		third.signForm(one);
+		// std::cout <<RED<< "Try sign by third with grade "<<third.getGrade()<< std::endl <<RESET;
+		// one.beSigned(third);
 	}
 	catch (std::exception & e)
 	{
