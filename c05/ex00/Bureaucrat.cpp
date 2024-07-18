@@ -12,7 +12,7 @@
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(void) : _name("default"), _grade(0)
+Bureaucrat::Bureaucrat(void) : _name("default"), _grade(150)
 {
     // std::cout<<MAGENTA<<"Bureaucrat Default Constructor called"<< std::endl <<RESET;
 }
