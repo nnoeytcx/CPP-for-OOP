@@ -20,12 +20,12 @@ SRC = main.cpp Bureaucrat.cpp
 HEADER = Bureaucrat.hpp
 OBJS	= $(SRC:.cpp=.o)
 
-%.o:%.c $(HEADER)
+%.o:%.cpp $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(HEADER)
+$(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:

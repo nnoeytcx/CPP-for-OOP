@@ -29,11 +29,16 @@ class Intern
 
         AForm *makeForm(const std::string form,const std::string target); 
         // "Intern creates <form>"
+
         class FormNotFoundException: public std::exception
         {
 			public:
 				const char* what() const throw();
 		};
+    private:
+        static AForm *makeRB(std::string target);
+        static AForm *makeSH(std::string target);
+        static AForm *makePP(std::string target);
 };
 
 #endif

@@ -16,18 +16,18 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 #add header too!!
-SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
-		RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
-HEADER = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp \
-		RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+HEADER = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp \
+		RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 OBJS	= $(SRC:.cpp=.o)
 
-%.o:%.c $(HEADER)
+%.o:%.cpp $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(HEADER)
+$(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:

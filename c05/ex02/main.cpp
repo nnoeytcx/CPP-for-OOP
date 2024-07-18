@@ -44,9 +44,20 @@ int main(void)
 		// std::cout <<CYAN<< "fourth : "<< fourth << std::endl <<RESET;
 		//Bureaucrat fifth("P'Muay", 0);
 		//Bureaucrat sixth("someone", 151);
-
-		// AForm one("first", 24, 14);
-
+		std::cout<<std::endl;
+		//beSigned() vs signForm()
+		// Form one("first", 14, 39);
+		// Form two("second", 1, 39);
+		// std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
+		// std::cout <<RED<< "Try sign by second with grade "<<second.getGrade()<< std::endl <<RESET;
+		// second.signForm(one);
+		// std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
+		// second.signForm(one);
+		
+		// std::cout<<MAGENTA<<"form two : "<<two<<std::endl<<RESET;
+		// std::cout <<RED<< "Try sign by first with grade "<<first.getGrade()<< std::endl <<RESET;
+		// first.signForm(two);
+		// std::cout<<MAGENTA<<"form two : "<<two<<std::endl<<RESET;
 
 		PresidentialPardonForm	one("home");
 		std::cout<<MAGENTA<<one<<RESET;
@@ -62,10 +73,10 @@ int main(void)
 		// signform call besign -> check whether it's signed
 		std::cout<<MAGENTA<<two<<RESET;
 		fourth.executeForm(two);
-		fourth.executeForm(two);
-		fourth.executeForm(two);
-		fourth.executeForm(two);
-		fourth.executeForm(two);
+		// fourth.executeForm(two);
+		// fourth.executeForm(two);
+		// fourth.executeForm(two);
+		// fourth.executeForm(two);
 		
 
 		ShrubberyCreationForm three("home");
@@ -73,23 +84,18 @@ int main(void)
 		fourth.signForm(three);
 		std::cout<<MAGENTA<<three<<RESET;
 		fourth.executeForm(three);
-		// std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
-		// std::cout <<RED<< "Try sign by second with grade "<<second.getGrade()<< std::endl <<RESET;
-		// one.beSigned(second);
-		// std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
-		// one.execute(second);
-		// second.signForm(one);
-		// std::cout <<RED<< "Try get third sign form with grade "<<third.getGrade()<< std::endl <<RESET;
-		// third.signForm(one);
-		// std::cout <<RED<< "Try sign by third with grade "<<third.getGrade()<< std::endl <<RESET;
-		// one.beSigned(third);
+
+		std::cout<<"=----------------------------="<<std::endl;
+		PresidentialPardonForm four("home");
+		std::cout<<MAGENTA<<four<<RESET;
+		first.signForm(four);
+		std::cout<<MAGENTA<<four<<RESET;
+		// first.executeForm(four);
+
+
 	}
 	catch (std::exception & e)
 	{
-		// Generally, stdout should be used for actual program output, while all information 
-		// and error messages should be printed to stderr, so that if the user redirects output 
-		// to a file, information messages are still printed on the screen and not to the output file.
-		// std::cerr is not buffered like the other two.[cout and clog]
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 }

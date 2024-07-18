@@ -41,16 +41,20 @@ int main(void)
 		// std::cout <<CYAN<< "fourth : "<< fourth << std::endl <<RESET;
 		//Bureaucrat fifth("P'Muay", 0);
 		//Bureaucrat sixth("someone", 151);
+		std::cout<<std::endl;
+		//beSigned() vs signForm()
 		Form one("first", 14, 39);
+		Form two("second", 1, 39);
 		std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
 		std::cout <<RED<< "Try sign by second with grade "<<second.getGrade()<< std::endl <<RESET;
-		one.beSigned(second);
+		second.signForm(one);
 		std::cout<<MAGENTA<<"form one : "<<one<<std::endl<<RESET;
 		second.signForm(one);
-		std::cout <<RED<< "Try get third sign form with grade "<<third.getGrade()<< std::endl <<RESET;
-		third.signForm(one);
-		// std::cout <<RED<< "Try sign by third with grade "<<third.getGrade()<< std::endl <<RESET;
-		// one.beSigned(third);
+		
+		std::cout<<MAGENTA<<"form two : "<<two<<std::endl<<RESET;
+		std::cout <<RED<< "Try sign by first with grade "<<first.getGrade()<< std::endl <<RESET;
+		first.signForm(two);
+		std::cout<<MAGENTA<<"form two : "<<two<<std::endl<<RESET;
 	}
 	catch (std::exception & e)
 	{

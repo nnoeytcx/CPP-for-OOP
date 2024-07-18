@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AFORM_HPP
-# define AFORM_HPP
+#ifndef AAFORM_HPP
+# define AAFORM_HPP
 
 # include <iostream>
 # include <string.h>
@@ -31,9 +31,9 @@ class AForm
         void beSigned(Bureaucrat &bureaucrat);
 
         const std::string getName(void) const;
-        const bool getSigned(void) const;
-        const int getSignedGrade(void) const;
-        const int getExecGrade(void) const;
+        bool getSigned(void) const;
+        int getSignedGrade(void) const;
+        int getExecGrade(void) const;
 
         class IsNotSignException: public std::exception{
 			public:
@@ -48,6 +48,7 @@ class AForm
 				const char* what() const throw();
         };
         virtual void execute(Bureaucrat const & executor) const = 0;
+
     private:
         const std::string       _name;
         bool                    _signed;

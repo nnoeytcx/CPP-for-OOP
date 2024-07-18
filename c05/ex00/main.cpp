@@ -15,8 +15,8 @@
 int main(void)
 {
 	try {
-		Bureaucrat  first("noey", 20);
-    	Bureaucrat  second("P'Mew", 4);
+		Bureaucrat  first("P'Mew", 3);
+    	Bureaucrat  second("noey", 24);
     	Bureaucrat  third("Non", 150);
     	Bureaucrat  fourth("P'Wave", 1);
 		std::cout <<BLUE<< "first : "<< first << std::endl <<RESET;

@@ -25,7 +25,6 @@ const std::string BLUE = "\033[34m";
 const std::string MAGENTA = "\033[35m";
 const std::string CYAN = "\033[36m";
 const std::string RESET = "\033[0m";
-const std::string BOLD = "\u001b[1m";
 
 class Bureaucrat
 {
@@ -38,7 +37,7 @@ class Bureaucrat
         //The & means that it returns a reference to class bureaucrat.
 
         const std::string getName(void) const;
-        const int getGrade(void) const;
+        int getGrade(void) const;
 
         void incrementGrade();
 		void decrementGrade();

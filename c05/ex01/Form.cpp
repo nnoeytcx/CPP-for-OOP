@@ -12,7 +12,7 @@
 
 #include "Form.hpp"
 
-Form::Form(void) : _name("default"), _exec_grade(0), _sign_grade(0)
+Form::Form(void) : _name("default"), _sign_grade(0), _exec_grade(0)
 {
  
 }
@@ -30,7 +30,7 @@ Form::~Form(void)
 
 }
 
-Form::Form(const Form &other) : _name(other._name), _exec_grade(other._exec_grade), _sign_grade(other._sign_grade), _signed(other._signed)
+Form::Form(const Form &other) : _name(other._name), _signed(other._signed), _sign_grade(other._sign_grade), _exec_grade(other._exec_grade)
 {
 
 }
@@ -56,17 +56,17 @@ const std::string Form::getName(void) const
     return (this->_name);
 }
 
-const bool Form::getSigned(void) const
+bool Form::getSigned(void) const
 {
     return (this->_signed);
 }
 
-const int Form::getSignedGrade(void) const
+int Form::getSignedGrade(void) const
 {
     return (this->_sign_grade);
 }
 
-const int Form::getExecGrade(void) const
+int Form::getExecGrade(void) const
 {
     return (this->_exec_grade);
 }

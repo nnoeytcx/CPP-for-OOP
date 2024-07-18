@@ -26,7 +26,6 @@ const std::string BLUE = "\033[34m";
 const std::string MAGENTA = "\033[35m";
 const std::string CYAN = "\033[36m";
 const std::string RESET = "\033[0m";
-const std::string BOLD = "\u001b[1m";
 
 class Form;
 
@@ -41,27 +40,22 @@ class Bureaucrat
         //The & means that it returns a reference to class bureaucrat.
 
         const std::string getName(void) const;
-        const int getGrade(void) const;
+        int getGrade(void) const;
 
         void incrementGrade();
 		void decrementGrade();
 
-        // class myexception: public exception
-        // {
-        //     const char* what() const throw() //declare
-        // } exception's nickname
+        class GradeTooHighException: public std::exception{
+			public:
+				const char* what() const throw();
+		};
+		class GradeTooLowException: public std::exception{
+			public:
+				const char* what() const throw();
+		};
 
-        class GradeTooHighException: public std::exception
-        {
-			public:
-				const char* what() const throw();
-		};
-		class GradeTooLowException: public std::exception
-        {
-			public:
-				const char* what() const throw();
-		};
         void signForm(Form &form);
+
     private:
         const std::string       _name;
         int                     _grade;

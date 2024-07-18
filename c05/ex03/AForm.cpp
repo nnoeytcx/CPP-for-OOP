@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "AForm.hpp"
 
-AForm::AForm(void) : _name("default"), _exec_grade(0), _sign_grade(0)
+AForm::AForm(void) : _name("default"), _sign_grade(0), _exec_grade(0)
 {
  
 }
@@ -30,7 +30,7 @@ AForm::~AForm(void)
 
 }
 
-AForm::AForm(const AForm &other) : _name(other._name), _exec_grade(other._exec_grade), _sign_grade(other._sign_grade), _signed(other._signed)
+AForm::AForm(const AForm &other) : _name(other._name), _signed(other._signed), _sign_grade(other._sign_grade), _exec_grade(other._exec_grade)
 {
 
 }
@@ -56,27 +56,27 @@ const std::string AForm::getName(void) const
     return (this->_name);
 }
 
-const bool AForm::getSigned(void) const
+bool AForm::getSigned(void) const
 {
     return (this->_signed);
 }
 
-const int AForm::getSignedGrade(void) const
+int AForm::getSignedGrade(void) const
 {
     return (this->_sign_grade);
 }
 
-const int AForm::getExecGrade(void) const
+int AForm::getExecGrade(void) const
 {
     return (this->_exec_grade);
 }
 
 std::ostream & operator<< (std::ostream &o, AForm const & i)
 {
-	o<<CYAN<<"[Form's name : "<<i.getName()<<"]"<<std::endl;
-    o<<CYAN<<"[Form's status : "<<i.getSigned()<<"]"<<std::endl;
-    o<<CYAN<<"[Form's sign grade : "<<i.getSignedGrade()<<"]"<<std::endl;
-    o<<CYAN<<"[Form's exec grade : "<<i.getExecGrade()<<"]"<<std::endl<<RESET;
+	o<<GREEN<<"[AForm's name : "<<i.getName()<<"]"<<std::endl;
+    o<<GREEN<<"[AForm's status : "<<i.getSigned()<<"]"<<std::endl;
+    o<<GREEN<<"[AForm's sign grade : "<<i.getSignedGrade()<<"]"<<std::endl;
+    o<<GREEN<<"[AForm's exec grade : "<<i.getExecGrade()<<"]"<<std::endl<<RESET;
 	return (o);
 }
 

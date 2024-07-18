@@ -67,7 +67,7 @@ const std::string Bureaucrat::getName(void) const
     return(_name);
 }
 
-const int Bureaucrat::getGrade(void) const
+int Bureaucrat::getGrade(void) const
 {
     return(_grade);
 }
@@ -82,7 +82,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw(){
 
 std::ostream & operator<<(std::ostream &o, Bureaucrat const &i)
 {
-	o <<YELLOW<< i.getName() << ", bureaucrat grade " << i.getGrade() <<RESET; 
+	o <<YELLOW<< i.getName() << ", bureaucrat grade " << i.getGrade() <<"."<<RESET; 
 	return (o);
 }
 
@@ -93,7 +93,8 @@ void    Bureaucrat::signForm(AForm &form)
 		std::cout<<this->_name<<" signed "<<form.getName()<<std::endl;
 	}
 	catch (std::exception &e){
-		std::cout<<this->_name<<" couldn’t sign "<<form.getName()<<" because "<<e.what()<<std::endl;
+		std::cout<<this->_name<<" couldn’t sign "<<form.getName();
+        std::cout<<" because "<<e.what()<<std::endl;
 	}
 }
 
@@ -105,6 +106,6 @@ void    Bureaucrat::executeForm(AForm const &form)
     }
     catch (std::exception &e)
     {
-        std::cout<<RED<<this->_name<<"couldn't execute "<<form.getName()<< " because "<<e.what()<<std::endl<<RESET;
+        std::cout<<RED<<this->_name<<" couldn't execute "<<form.getName()<< " because "<<e.what()<<std::endl<<RESET;
     }
 }

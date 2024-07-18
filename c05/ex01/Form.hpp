@@ -31,9 +31,9 @@ class Form
         void beSigned(Bureaucrat &bureaucrat);
 
         const std::string getName(void) const;
-        const bool getSigned(void) const;
-        const int getSignedGrade(void) const;
-        const int getExecGrade(void) const;
+        bool getSigned(void) const;
+        int getSignedGrade(void) const;
+        int getExecGrade(void) const;
 
         class GradeTooHighException: public std::exception{
 			public:
