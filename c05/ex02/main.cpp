@@ -66,7 +66,7 @@ int main(void)
 		fourth.executeForm(one);
 		// executeForm call execute
 
-		RobotomyRequestForm two("home");
+		RobotomyRequestForm two("somewhere");
 		std::cout<<MAGENTA<<two<<RESET;
 		fourth.signForm(two);
 		// two.beSigned(fourth);
@@ -79,18 +79,18 @@ int main(void)
 		// fourth.executeForm(two);
 		
 
-		ShrubberyCreationForm three("home");
+		ShrubberyCreationForm three("why");
 		std::cout<<MAGENTA<<three<<RESET;
 		fourth.signForm(three);
 		std::cout<<MAGENTA<<three<<RESET;
 		fourth.executeForm(three);
 
 		std::cout<<"=----------------------------="<<std::endl;
-		PresidentialPardonForm four("home");
+		PresidentialPardonForm four("ohhh");
 		std::cout<<MAGENTA<<four<<RESET;
 		first.signForm(four);
 		std::cout<<MAGENTA<<four<<RESET;
-		// first.executeForm(four);
+		first.executeForm(four);
 
 
 	}
